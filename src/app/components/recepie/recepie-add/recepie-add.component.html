@@ -1,0 +1,16 @@
+<h1 class="display-4">{{text}}</h1>
+<form [formGroup]="form">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" [formControl]="name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="body">Description</label>
+        <textarea [formControl]="description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Created By</label>
+        <input type="text" [formControl]="createdBy" class="form-control">
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>

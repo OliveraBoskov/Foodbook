@@ -1,0 +1,26 @@
+<div class="container">
+<h1 class="display-4">Recepies</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Created by</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let recepie of recepies">
+                <td>{{recepie.id}}</td>
+                <td>{{recepie.name}}</td>
+                <td>{{recepie.createdBy}}</td>
+                <td>
+                    <div class="d-inline">
+                    <button class="btn btn-primary" (click)="onEdit(recepie.id)">Edit</button>
+                    <button class="btn btn-danger" (click)="onDelete(recepie.id)">Delete</button>
+                    </div>
+                </td>
+            </tr>
+    </tbody>
+</table>
+</div>
